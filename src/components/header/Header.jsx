@@ -1,11 +1,15 @@
 import './header.css'
+import Navbar from '../navbar/Navbar'
 
 function Header() {
     return (
-        <div className="header">
-            <h1>ComicDash</h1>
-            <h3>Made using the Marvel API!</h3>
-        </div>
+        <header>
+            <Navbar />
+            <div className="header">
+                <h1 className='main-title'>ComicDash</h1>
+                <h4>Search and view some of MARVEL's latest comics!</h4>
+            </div>
+        </header>
     )
 }
 
