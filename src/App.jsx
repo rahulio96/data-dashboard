@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ComicList from './components/comic-list/ComicList'
+import Home from './components/home/Home'
 
 function App() {
 
   return (
     <>
-      <ComicList />
+      <Home />
     </>
   )
 }
