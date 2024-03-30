@@ -16,7 +16,7 @@ function ComicList() {
       )
       const json = await response.json()
       console.log(json.data.results)
-      setComicList(json.data.results)
+      setComicList(json.data.results.reverse())
     }
     fetchData()
   }, [])
