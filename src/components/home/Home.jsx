@@ -20,7 +20,7 @@ function Home() {
       )
       const json = await response.json()
       setComicList(json.data.results.reverse())
-      setStaticList(json.data.results.reverse())
+      setStaticList(json.data.results)
     }
     fetchData()
   }, [])

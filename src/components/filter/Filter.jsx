@@ -1,5 +1,5 @@
 import './filter.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Filter( {setComicList, staticList} ) {
 
@@ -8,21 +8,44 @@ function Filter( {setComicList, staticList} ) {
 
     const [search, setSearch] = useState("")
 
-    const onSearch = (e) => {
-        setSearch(e.target.value)
-        filter(e.target.value)
-    }
+    useEffect(() => {
+        applyFilters()
+    }, [search, spiderCheck, xCheck])
 
-    const filter = (search) => {
-        let filteredList = [...staticList]
+    const applyFilters = () => {
+        let filteredList = staticList
+
         if (search.trim() !== "") {
             filteredList = filteredList.filter(comic =>
                 comic.title.toLowerCase().includes(search.toLowerCase())
             )
-            setComicList(filteredList)
-        } else {
-            setComicList(staticList)
         }
+
+        if (spiderCheck) {
+            filteredList = filteredList.filter(comic =>
+                comic.title.toLowerCase().includes('spider-man')
+            )
+        }
+
+        if (xCheck) {
+            filteredList = filteredList.filter(comic =>
+                comic.title.toLowerCase().includes('x-men')
+            )
+        }
+
+        setComicList(filteredList)
+    }
+
+    const onSearch = (e) => {
+        setSearch(e.target.value)
+    }
+
+    const onSpiderCheck = (e) => {
+        setSpiderCheck(e.target.checked)
+    }
+
+    const onXCheck = (e) => {
+        setXCheck(e.target.checked)
     }
 
     return (
@@ -30,15 +53,10 @@ function Filter( {setComicList, staticList} ) {
             <input value={search} onChange={onSearch} className='search' type="text" placeholder='Search by name...' />
 
             <div className='checkbox-container'>
-                Max Pages
-                <input className='slider' type="range" min="1" max="1000" value="500" />
-            </div>
-
-            <div className='checkbox-container'>
                 Spider-Man
-                <input className='checkbox search' type="checkbox" />
+                <input checked={spiderCheck} onChange={onSpiderCheck} className='checkbox search' type="checkbox" />
                 X-Men
-                <input className='checkbox' type="checkbox" />
+                <input checked={xCheck} onChange={onXCheck} className='checkbox' type="checkbox" />
             </div>
         </div>
     )
