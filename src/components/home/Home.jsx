@@ -1,5 +1,5 @@
 import '../../App.css'
-import './home.css'
+import homeCSS from './Home.module.css'
 import ComicList from '../comic-list/ComicList'
 import Header from '../header/Header'
 import Filter from '../filter/Filter'
@@ -27,7 +27,7 @@ function Home() {
   }, [])
 
   return (
-    <div className='home-container'>
+    <div className={homeCSS.container}>
         <Header />
         {staticList && <StatCards staticList={staticList}/>}
         {staticList && <Filter setComicList={setComicList} staticList={staticList}/>}
