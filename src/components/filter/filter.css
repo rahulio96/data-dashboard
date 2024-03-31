@@ -23,6 +23,7 @@ input {
 
 .slider {
     color: white;
+    padding: 0;
 }
 
 .search {
