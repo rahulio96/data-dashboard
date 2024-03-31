@@ -1,12 +1,48 @@
 import './stats.css'
+import { useEffect, useState } from 'react'
 
-function StatCards() {
+function StatCards({ staticList }) {
+
+    const [avgPage, setAvgPage] = useState(0)
+    const [minPrice, setMinPrice] = useState(0)
+    const [maxPrice, setMaxPrice] = useState(0)
+    const [length, setLength] = useState(0)
+
+    useEffect(() => {
+        const calculateStats = () => {
+            setLength(staticList.length)
+            
+            let totalPageCount = 0
+
+            let min = Infinity
+            let max = -Infinity
+
+            for (let i = 0; i < staticList.length; i++) {
+                let obj = staticList[i]
+                
+                totalPageCount += obj.pageCount
+
+                let price = obj.prices[0].price
+                if (price > max) {
+                    max = price
+                } else if (price < min) {
+                    min = price
+                }
+            }
+
+            setMinPrice(min)
+            setMaxPrice(max)
+            setAvgPage(totalPageCount / staticList.length)
+
+        }
+        calculateStats()
+    }, [])
 
     return (
         <div className="stat-container">
-            <div className='stat-card'>Average Page Count: {35}</div>
-            <div className='stat-card'>Total Entries: {100}</div>
-            <div className='stat-card'>Price Range: ${1.51} - ${3.12}</div>
+            <div className='stat-card'>Average Page Count: <text>{avgPage}</text></div>
+            <div className='stat-card'>Total Entries: <text>{length}</text></div>
+            <div className='stat-card'>Price Range: <text>${minPrice} - ${maxPrice}</text></div>
         </div>
     )
 }

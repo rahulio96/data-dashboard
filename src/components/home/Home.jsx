@@ -28,7 +28,7 @@ function Home() {
   return (
     <>
         <Header />
-        <StatCards />
+        {staticList && <StatCards staticList={staticList}/>}
         <Filter setComicList={setComicList} staticList={staticList}/>
         <ComicList comicList={comicList}/>
     </>
