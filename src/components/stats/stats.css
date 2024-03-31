@@ -1,0 +1,15 @@
+.stat-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.stat-card {
+    color: #e23636;
+    background-color: white;
+    font-weight: bolder;
+    margin: 10px;
+    padding: 2%;
+    border-radius: 15px;
+}
