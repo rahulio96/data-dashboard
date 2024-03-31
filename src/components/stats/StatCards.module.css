@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    justify-content: center;
 }
 
 .card {
@@ -16,4 +17,11 @@
 
 b {
     color:#231F20;
+    display: inline-flex;
+}
+
+@media (max-width: 768px) {
+    .card {
+        font-size: small;
+    }
 }
