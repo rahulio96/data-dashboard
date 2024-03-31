@@ -1,10 +1,11 @@
 .total-comic-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
     padding: 50px;
     background-color: #231F20;
     border-radius: 25px;
+    width: 60%;
 }
   
 img {

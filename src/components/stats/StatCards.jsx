@@ -40,9 +40,9 @@ function StatCards({ staticList }) {
 
     return (
         <div className="stat-container">
-            <div className='stat-card'>Average Page Count: <text>{avgPage}</text></div>
-            <div className='stat-card'>Total Entries: <text>{length}</text></div>
-            <div className='stat-card'>Price Range: <text>${minPrice} - ${maxPrice}</text></div>
+            <div className='stat-card'>Average Page Count: <b>{avgPage}</b></div>
+            <div className='stat-card'>Total Entries: <b>{length}</b></div>
+            <div className='stat-card'>Price Range: <b>${minPrice} - ${maxPrice}</b></div>
         </div>
     )
 }

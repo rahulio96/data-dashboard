@@ -1,4 +1,5 @@
 import '../../App.css'
+import './home.css'
 import ComicList from '../comic-list/ComicList'
 import Header from '../header/Header'
 import Filter from '../filter/Filter'
@@ -26,12 +27,12 @@ function Home() {
   }, [])
 
   return (
-    <>
+    <div className='home-container'>
         <Header />
         {staticList && <StatCards staticList={staticList}/>}
         <Filter setComicList={setComicList} staticList={staticList}/>
         <ComicList comicList={comicList}/>
-    </>
+    </div>
   )
 }
 
