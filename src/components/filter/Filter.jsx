@@ -5,16 +5,20 @@ function Filter( {setComicList, staticList} ) {
 
     const [spiderCheck, setSpiderCheck] = useState(false)
     const [xCheck, setXCheck] = useState(false)
-    const [page, setPage] = useState(50)
+    const [page, setPage] = useState(0)
 
     const [search, setSearch] = useState("")
 
     useEffect(() => {
         applyFilters()
-    }, [search, spiderCheck, xCheck])
+    }, [search, spiderCheck, xCheck, page])
 
     const applyFilters = () => {
         let filteredList = staticList
+        
+        filteredList = filteredList.filter(comic =>
+            comic.pageCount >= page
+        )
 
         if (search.trim() !== "") {
             filteredList = filteredList.filter(comic =>
@@ -57,8 +61,8 @@ function Filter( {setComicList, staticList} ) {
         <div className='filter-container'>
             <input value={search} onChange={onSearch} className='search' type="text" placeholder='Search by name...' />
             <div className='checkbox-container'>
-                Max Pages (0-100)
-                <input className='slider' type="range" min="0" max="100" step="1" value={page} onChange={onPageChange} />
+                Max Pages (30-90)
+                <input className='slider' type="range" min="30" max="90" step="1" value={page} onChange={onPageChange} />
             </div>
             <div className='checkbox-container'>
                 Spider-Man

@@ -30,7 +30,7 @@ function Home() {
     <div className='home-container'>
         <Header />
         {staticList && <StatCards staticList={staticList}/>}
-        <Filter setComicList={setComicList} staticList={staticList}/>
+        {staticList && <Filter setComicList={setComicList} staticList={staticList}/>}
         <ComicList comicList={comicList}/>
     </div>
   )
