@@ -2,12 +2,12 @@
     margin-top: 10%;
     margin-bottom: 5%;
     background-color: #231F20;
-    padding: 5%;
+    padding: 2%;
     border-radius: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -15,10 +15,14 @@ input {
     background-color: white;
     color: #231F20;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid white;
     border-radius: 10px;
 
+}
+
+.slider {
+    color: white;
 }
 
 .search {
@@ -34,10 +38,4 @@ input {
 .checkbox-container {
     display: flex;
     align-items: center;
-}
-
-@media only screen and (max-width: 530px) {
-    .filter-container {
-        justify-content: center;
-    }
 }
