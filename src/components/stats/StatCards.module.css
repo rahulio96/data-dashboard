@@ -1,11 +1,11 @@
-.stat-container {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
 
-.stat-card {
+.card {
     color: #e23636;
     background-color: white;
     font-weight: bolder;
