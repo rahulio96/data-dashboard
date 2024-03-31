@@ -1,10 +1,10 @@
-import classes from './Comic.module.css'
+import comicCSS from './Comic.module.css'
 
 function ComicCard({title, image}) {
 
     return (
-        <div className={classes.card}>
-            <p className={classes.title}>{title}</p>
+        <div className={comicCSS.card}>
+            <p className={comicCSS.title}>{title}</p>
             <div>
                 <img src={image} />
             </div>

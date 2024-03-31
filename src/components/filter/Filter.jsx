@@ -1,5 +1,5 @@
-import './filter.css'
 import { useState, useEffect } from 'react'
+import filterCSS from './Filter.module.css'
 
 function Filter( {setComicList, staticList} ) {
 
@@ -58,17 +58,17 @@ function Filter( {setComicList, staticList} ) {
     }
 
     return (
-        <div className='filter-container'>
-            <input value={search} onChange={onSearch} className='search' type="text" placeholder='Search by name...' />
-            <div className='checkbox-container'>
+        <div className={filterCSS.container}>
+            <input value={search} onChange={onSearch} className={filterCSS.search} type="text" placeholder='Search by name...' />
+            <div className={filterCSS.checkboxContainer}>
                 Max Pages (30-90)
-                <input className='slider' type="range" min="30" max="90" step="1" value={page} onChange={onPageChange} />
+                <input className={filterCSS.slider} type="range" min="30" max="90" step="1" value={page} onChange={onPageChange} />
             </div>
-            <div className='checkbox-container'>
+            <div className={filterCSS.checkboxContainer}>
                 Spider-Man
-                <input checked={spiderCheck} onChange={onSpiderCheck} className='checkbox search' type="checkbox" />
+                <input checked={spiderCheck} onChange={onSpiderCheck} className={filterCSS.checkbox} type="checkbox" />
                 X-Men
-                <input checked={xCheck} onChange={onXCheck} className='checkbox' type="checkbox" />
+                <input checked={xCheck} onChange={onXCheck} className={filterCSS.checkbox} type="checkbox" />
             </div>
         </div>
     )

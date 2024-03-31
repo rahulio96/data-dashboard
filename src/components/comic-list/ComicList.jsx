@@ -1,12 +1,12 @@
 import ComicCard from './ComicCard'
-import classes from './Comic.module.css'
+import comicCSS from './Comic.module.css'
 
 function ComicList({comicList}) {
 
   return (
-    <div className={classes.container}>
+    <div className={comicCSS.container}>
       {comicList && Object.entries(comicList).map(([comic]) =>
-        <ComicCard className={classes.card}
+        <ComicCard className={comicCSS.card}
           key = {comicList[comic].id} 
           title = {comicList[comic].title} 
           image={comicList[comic].thumbnail.path + '.' + comicList[comic].thumbnail.extension}

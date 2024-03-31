@@ -1,4 +1,4 @@
-.filter-container {
+.container {
     margin-top: 2.5%;
     margin-bottom: 2.5%;
     background-color: #231F20;
@@ -18,7 +18,6 @@ input {
     margin: 10px;
     border: 1px solid white;
     border-radius: 10px;
-
 }
 
 .slider {
@@ -36,7 +35,7 @@ input {
 
 }
 
-.checkbox-container {
+.checkboxContainer {
     display: flex;
     align-items: center;
 }
