@@ -2,7 +2,7 @@
     color: white;
 }
 
-.main-title {
+.mainTitle {
     margin-top: 50px;
     margin-bottom: 0;
     display: flex;
@@ -10,14 +10,15 @@
     align-items: center;
 }
 
-.comic-icon {
+.icon {
     width: 80px;
     height: auto;
     margin-right: 10px;
 }
 
-.sub-title {
-    margin: 0;
+.subTitle {
+    margin-top: 0;
+    
 }
 
 header {
