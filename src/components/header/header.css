@@ -5,6 +5,15 @@
 .main-title {
     margin-top: 50px;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comic-icon {
+    width: 15%;
+    height: auto;
+    margin-right: 10px;
 }
 
 .sub-title {

@@ -6,7 +6,10 @@ function Header() {
         <header>
             <Navbar />
             <div className="header">
-                <h1 className='main-title'>ComicDash</h1>
+                <div className='main-title'>
+                    <img className='comic-icon' src='../../../public/comic-icon.png'/>
+                    <h1>ComicDash</h1>
+                </div>
                 <h4>Search and view some of MARVEL's latest comics!</h4>
             </div>
         </header>
