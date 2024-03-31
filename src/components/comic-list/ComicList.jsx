@@ -1,13 +1,12 @@
-import { useEffect, useState } from 'react'
 import ComicCard from './ComicCard'
-import './list.css'
+import classes from './Comic.module.css'
 
 function ComicList({comicList}) {
 
   return (
-    <div className='total-comic-container'>
+    <div className={classes.container}>
       {comicList && Object.entries(comicList).map(([comic]) =>
-        <ComicCard className='img-card'
+        <ComicCard className={classes.card}
           key = {comicList[comic].id} 
           title = {comicList[comic].title} 
           image={comicList[comic].thumbnail.path + '.' + comicList[comic].thumbnail.extension}
