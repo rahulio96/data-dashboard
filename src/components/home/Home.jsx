@@ -4,6 +4,7 @@ import ComicList from '../comic-list/ComicList'
 import Header from '../header/Header'
 import Filter from '../filter/Filter'
 import StatCards from '../stats/StatCards'
+import Graph from '../graph/Graph'
 import { useEffect, useState } from 'react'
 
 function Home() {
@@ -31,7 +32,11 @@ function Home() {
         <Header />
         {staticList && <StatCards staticList={staticList}/>}
         {staticList && <Filter setComicList={setComicList} staticList={staticList}/>}
-        <ComicList comicList={comicList}/>
+
+        {staticList && <Graph comicList={comicList}/>}
+        {comicList && <ComicList comicList={comicList}/>}
+
+
     </div>
   )
 }

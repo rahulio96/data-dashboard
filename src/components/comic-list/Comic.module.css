@@ -6,6 +6,7 @@
     background-color: #231F20;
     border-radius: 25px;
     width: 60%;
+    margin: 10px;
 }
   
 img {
@@ -28,6 +29,7 @@ img {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         padding: 25px;
         width: 90%;
+        margin: 5px;
     }
 }
 

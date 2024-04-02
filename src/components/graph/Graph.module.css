@@ -1,0 +1,23 @@
+.container {
+    padding: 50px;
+    background-color: #231F20;
+    border-radius: 25px;
+    width: 60%;
+    height: 60%;
+    margin: 10px;
+}
+
+.graph {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        width: 90%;
+        margin: 5px;
+    }
+}
