@@ -21,7 +21,16 @@ img {
 }
 
 .card {
-    margin: 10px;
+    margin: 0px;
+    padding: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.card:hover {
+    box-shadow: 0 0 30px white;
+    border-color: white;
 }
 
 @media (max-width: 768px) {
