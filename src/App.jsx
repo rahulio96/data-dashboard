@@ -13,14 +13,14 @@ let element = useRoutes([
     element: <Home />,
   },
   {
-    path: "/ss",
+    path: "/details/:id",
     element: <ComicPage />,
   },
   ])
   
   return (
     <>
-      <Home />
+      {element}
     </>
   )
 }

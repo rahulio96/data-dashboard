@@ -6,9 +6,8 @@ function Navbar() {
         <nav>
             <ul>
                 <li><Link to="/"> Dashboard</Link></li>
-                <li><Link to="/">About</Link></li>
+                <li><Link to="/about">About</Link></li>
             </ul>
-            <Outlet />
         </nav>
     )
 }
