@@ -4,7 +4,6 @@ import Navbar from '../navbar/Navbar'
 function Header() {
     return (
         <header>
-            <Navbar />
             <div className={headerCSS.header}>
                 <div className={headerCSS.mainTitle}>
                     <img className={headerCSS.icon} src='/comic-icon.png'/>
