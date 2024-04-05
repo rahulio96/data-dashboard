@@ -10,6 +10,7 @@ function ComicList({comicList}) {
           key = {comicList[comic].id} 
           title = {comicList[comic].title} 
           image={comicList[comic].thumbnail.path + '.' + comicList[comic].thumbnail.extension}
+          id={comicList[comic].id}
         />
       )}
     </div>

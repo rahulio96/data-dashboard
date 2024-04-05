@@ -40,10 +40,12 @@ function ComicPage() {
           <b className={comicPageCSS.title}>Series Name: {series}</b>
 
           <p className={comicPageCSS.desc}>{fullDetails.description}</p>
+
           <div>
             <p>Page Count: {fullDetails.pageCount}</p>
             <p>Print Price: ${price}</p>
           </div>
+          
           <a href={url}><button className={comicPageCSS.linkButton}>More Details</button></a>
         </div>
       </div>
