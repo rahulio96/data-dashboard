@@ -21,6 +21,7 @@ function Home() {
           "http://gateway.marvel.com/v1/public/comics?ts=1&limit=100&orderBy=-focDate&noVariants=True&format=comic&apikey=" + PUBLIC_API_KEY +"&hash=" + HASH_KEY
       )
       const json = await response.json()
+      console.log(json.data.results)
       setComicList(json.data.results.reverse())
       setStaticList(json.data.results)
     }

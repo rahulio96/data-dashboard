@@ -4,6 +4,7 @@ import './App.css'
 import Home from './components/home/Home'
 import ComicPage from './components/comic-page/ComicPage'
 import { useRoutes } from "react-router-dom"
+import DetailPage from './routes/DetailPage'
 
 function App() {
 
@@ -14,7 +15,7 @@ let element = useRoutes([
   },
   {
     path: "/details/:id",
-    element: <ComicPage />,
+    element: <DetailPage />,
   },
   ])
   
