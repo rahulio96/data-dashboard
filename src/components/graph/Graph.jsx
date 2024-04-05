@@ -14,8 +14,8 @@ function Graph({ comicList }) {
             {
                 label: 'Print Price',
                 data: arr,
-                backgroundColor: '#e23636',
-                borderColor: '#e23636',
+                backgroundColor: '#FFFFFF',
+                borderColor: '#FFFFFF',
                 borderWidth: 1,
             },
         ],

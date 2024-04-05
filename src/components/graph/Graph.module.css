@@ -2,7 +2,7 @@
     padding: 50px;
     background-color: #231F20;
     border-radius: 25px;
-    width: 60%;
+    width: 40%;
     height: 60%;
     margin: 10px;
 }
@@ -17,7 +17,7 @@
 @media (max-width: 768px) {
     .container {
         padding: 25px;
-        width: 90%;
+        width: 88%;
         margin: 5px;
     }
 }
