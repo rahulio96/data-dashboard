@@ -1,6 +1,6 @@
 import graphCSS from './Graph.module.css'
 import { useState, useEffect } from 'react'
-import { Bar } from "react-chartjs-2"
+import { Bar, Line } from "react-chartjs-2"
 import Chart from 'chart.js/auto'
 
 function Graph({ comicList }) {
@@ -21,10 +21,24 @@ function Graph({ comicList }) {
         ],
     }
 
+    const [isBar, setIsBar] = useState(true)
+
+    const changeGraph = (e) => {
+        setIsBar(!isBar)
+    }
+
+    const graphComponent = isBar ? (<Bar className={graphCSS.graph} data={dataset} />)
+            : (<Line className={graphCSS.graph} data={dataset} />)
+    
+    const buttonText = isBar ? ('Switch to Line Graph') : ('Switch to Bar Graph')
+
     return (
-        <div className={graphCSS.container}>
-            <Bar className={graphCSS.graph} data={dataset} />
-        </div>
+        <>
+            <button className={graphCSS.toggle} onClick={changeGraph}>{buttonText}</button>
+            <div className={graphCSS.container}>
+                {graphComponent} 
+            </div>
+        </>
     )
 }
 

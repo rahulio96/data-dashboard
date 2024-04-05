@@ -7,6 +7,15 @@
     margin: 10px;
 }
 
+.toggle {
+    background-color: white;
+    color: #231F20;
+}
+
+.toggle:hover {
+    border-color: #231F20;
+}
+
 .graph {
     width: 100%;
     display: flex;
