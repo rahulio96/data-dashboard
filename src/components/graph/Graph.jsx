@@ -5,15 +5,28 @@ import Chart from 'chart.js/auto'
 
 function Graph({ comicList }) {
 
-    const arr = comicList.map((comic) => comic.prices[0].price)
+    const prices = comicList.map((comic) => comic.prices[0].price)
+    const pages = comicList.map((comic) => comic.pageCount)
     const labels = comicList.map((comic) => comic.title.slice(0, 13) + '...')
+    
+    const [dataToggle, setDataToggle] = useState(true)
+
+    const changeData = (e) => {
+        setDataToggle(!dataToggle)
+    }
+
+    const dataBtn = dataToggle ? ('Switch to Price Graph') : ('Switch to Page Graph')
+
+    const data = dataToggle ? (prices) : (pages)
+
+    const label = dataToggle ? ('Print Price') : ('Page Count')
 
     const dataset = {
         labels: labels,
         datasets: [
             {
-                label: 'Print Price',
-                data: arr,
+                label: label,
+                data: data,
                 backgroundColor: '#FFFFFF',
                 borderColor: '#FFFFFF',
                 borderWidth: 1,
@@ -29,12 +42,17 @@ function Graph({ comicList }) {
 
     const graphComponent = isBar ? (<Bar className={graphCSS.graph} data={dataset} />)
             : (<Line className={graphCSS.graph} data={dataset} />)
+
+
     
     const buttonText = isBar ? ('Switch to Line Graph') : ('Switch to Bar Graph')
 
     return (
         <>
-            <button className={graphCSS.toggle} onClick={changeGraph}>{buttonText}</button>
+            <div className={graphCSS.btnContainer}>
+                <button className={graphCSS.toggle} onClick={changeGraph}>{buttonText}</button>
+                <button className={graphCSS.toggle} onClick={changeData}>{dataBtn}</button>
+            </div>
             <div className={graphCSS.container}>
                 {graphComponent} 
             </div>

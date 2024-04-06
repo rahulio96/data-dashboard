@@ -10,10 +10,16 @@
 .toggle {
     background-color: white;
     color: #231F20;
+    margin: 10px;
 }
 
 .toggle:hover {
     border-color: #231F20;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .graph {
