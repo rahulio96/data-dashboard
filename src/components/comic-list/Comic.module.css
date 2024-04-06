@@ -6,6 +6,7 @@
     background-color: #231F20;
     border-radius: 25px;
     width: 60%;
+    margin: 10px;
 }
   
 img {
@@ -20,7 +21,23 @@ img {
 }
 
 .card {
-    margin: 10px;
+    margin: 15px;
+    padding: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-radius: 25px;
+    color: white;
+    font-weight: normal;
+    font-size: medium;
+}
+
+.card:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #e23636;
+    font-size: medium;
+    font-weight: bold;
+    transform: translate3D(0,-1px,0) scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -28,6 +45,11 @@ img {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         padding: 25px;
         width: 90%;
+        margin: 5px;
+    }
+
+    .card {
+        font-size: small;
     }
 }
 

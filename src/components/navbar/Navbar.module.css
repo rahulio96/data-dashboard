@@ -1,21 +1,22 @@
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid white;
-    top:0;
-}
-
 .name {
     padding: 0px 20px;
     font-weight: 1000;
 }
 
 nav ul {
+    z-index: 1;
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 15px;
+    border-bottom: 1px solid white;
+    align-items: center;
+    position: fixed; 
+    margin: 0;
+    top: 0; 
+    right: 0; 
+    left: 0;
+    background-color: #e23636;
 }
 
 nav ul li {
