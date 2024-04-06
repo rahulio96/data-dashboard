@@ -4,7 +4,7 @@ Submitted by: **Rahul Gupta**
 
 This web app: **displays alist and statistics with some of Marvel's latest comic books! Built using the Marvel API**
 
-Time spent: **5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
@@ -21,20 +21,22 @@ The following **optional** features are implemented:
     - New stat card for average price
     - Ability to change graphs between price and page count to visualize more data
 - [x] The site allows users to toggle between different data visualizations
+    - Toggle between line and bar graph
 
 The following **additional** features are implemented:
 
 * [x] Site is responsive and works on mobile devices
 * [x] Noticed that the graph has animations, so it dynamically changes depending on filters
+* [x] Included a link on each comic detail page that links to marvel's official site
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./dashboard-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
